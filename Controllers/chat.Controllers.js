@@ -26,7 +26,7 @@ const accessChat = asyncHandler(async (req, res) => {
 
     //the variable chats up till this point(ln27) is a big object with field values name,isGroupchat,groupAdmin,an array of users(with 2 values) and lastestMessage(which is an object that has references as values in its fields namely: "sender" and "chat" but we need SENDER )
     chats = await DB.User.populate(chats, {
-      // with the help pf the User model we can populate a given path(field) in the big object
+      // with the help of the User model we can populate a given path(field) in the big object
       path: "lastestMessage.sender",
       //   select, selects the values to be populated
       select: "name email",

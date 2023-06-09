@@ -9,7 +9,8 @@ const {
   removeFromGroup,
 } = require("../Controllers/chat.Controllers");
 
-router.route("/").get(verify, fetchChats).post(verify, accessChat);
+router.route("/chat").get(verify, fetchChats).post(verify, accessChat);
+
 router.post("/group", verify, createGroupChat);
 router.put("/rename", verify, renameGroup);
 router.put("/groupadd", verify, addToGroup);

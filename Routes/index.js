@@ -7,4 +7,5 @@ const router = express.Router();
 router.use(chatRoute);
 router.use(authRoute);
 router.use(messageRoute);
+
 module.exports = router;
